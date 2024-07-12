@@ -1,44 +1,44 @@
-report 50120 "Customer who paid fine Report"
+report 50120 "Customer who paid fine_Report"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultRenderingLayout = LayoutName;
-    
+
     dataset
     {
         dataitem(Lending; Lending)
         {
             column(Customer_Name; "Customer Name")
             {
-                
+
             }
-            column(Fine_Amount;"Fine Amount")
+            column(Fine_Amount; "Fine Amount")
             {
-                
+
             }
-            column(Book_ID;"Book ID")
+            column(Book_ID; "Book ID")
             {
-                
+
             }
-            column(Lending_Date;"Lending Date")
+            column(Lending_Date; "Lending Date")
             {
-                
+
             }
-            column(Return_Date;"Return Date")
+            column(Return_Date; "Return Date")
             {
-                
+
             }
-            column(Status;Status)
+            column(Status; Status)
             {
-                
+
             }
-            column(Due_Date;"Due Date")
+            column(Due_Date; "Due Date")
             {
-                
+
             }
         }
     }
-    
+
     requestpage
     {
         AboutTitle = 'Filter by Date';
@@ -49,21 +49,21 @@ report 50120 "Customer who paid fine Report"
             {
                 group(FilterGroup)
                 {
-                    field(StartDate ; startingDate)
+                    field(StartDate; startingDate)
                     {
                         ApplicationArea = All;
-                        
+
                     }
-                    field(EndDate ; EndDate)
+                    field(EndDate; EndDate)
                     {
                         ApplicationArea = All;
-                        
+
                     }
                 }
             }
         }
-    
-    
+
+
         actions
         {
             area(processing)
@@ -72,12 +72,12 @@ report 50120 "Customer who paid fine Report"
                 {
                     ApplicationArea = All;
                     caption = ' Generate Report';
-                    
+
                 }
             }
         }
     }
-    
+
     rendering
     {
         layout(LayoutName)
@@ -86,10 +86,10 @@ report 50120 "Customer who paid fine Report"
             LayoutFile = 'MyReport.docx';
         }
     }
-    
+
     var
         StartingDate: Date;
         EndDate: Date;
-        LenderRec:Record Lending ;
+        LenderRec: Record Lending;
 
 }
