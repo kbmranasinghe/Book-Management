@@ -4,7 +4,7 @@ page 50123 "Book List"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Book;
-    Caption = 'Book List';
+    Caption = 'Bonus List';
     CardPageId = "Book Card";
     Editable = false;
 
